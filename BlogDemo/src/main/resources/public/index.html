@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+ <style type="text/css">
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    @media screen and (max-width: 720px) {
+
+    }
+    body{
+        overflow: hidden;
+    }
+     #div1{
+         background-image: url(img/1.png);background-repeat: no-repeat; background-size: 1536px;background-attachment:fixed;height: 1200px;
+     }
+     #div2{
+         position: fixed;
+         width: 300px;
+         height: 370px;
+         margin: auto;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         border: solid 1px;
+         border-radius: 6px;
+     }
+     #div3{
+         text-align: center;
+         margin-top: 15%;
+     }
+     input{
+         background: #f5f6f7;
+         border-width: 0px;
+         outline: none;
+     }
+ </style>
+</head>
+<body>
+<div id="div1">
+    <div id="div2">
+        <div id="div3">
+            <p style="font-size: 2em">零创博客</p><br><br>
+        <form action="index.do" method="post">
+            <input style="width:170px;height: 30px;border-radius: 6px" type="text" name="username" placeholder="请输入账号" required oninvalid="setCustomValidity('请输入您的账号');"oninput="setCustomValidity('')"><br><br>
+            <input style="width:170px;height: 30px;border-radius: 6px" type="password" name="userpassword" placeholder="请输入密码" required oninvalid="setCustomValidity('请输入您的密码');"oninput="setCustomValidity('')" ><br><br>
+            <input style="width:150px;height: 30px;border-radius: 6px;background: #ee9b86" type="submit" value="登录">
+        </form>
+        </div>
+        <p style="text-align: center;color: red" th:text="${msg}" ></p><br><br>
+        <a style="margin-left: 45%;margin-top: 10%" href="register.html">没有账号？点我注册</a>
+    </div>
+</div>
+</body>
+</html>
